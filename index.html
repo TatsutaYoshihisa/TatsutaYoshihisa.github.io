@@ -9,13 +9,14 @@
 <body style='margin: 0; overflow: hidden;'>
 <!-- ③ シーンを追加 -->
 <a-scene embedded arjs>
+    <a-assets>
+        <!-- 3Dモデルを読み込む -->
+        <a-asset-item id="hbd" src="HBD.glb" scale="1 1 1"></a-asset-item>
+    </a-assets>
   <!-- ④ マーカーを追加 ここから -->
   <a-marker preset="pattern-marker" url="pattern-marker.patt">
     <!-- ⑤ オブジェクトの追加 -->
-    <a-box position="0 .5 0" color="#111">
-      <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
-      </a-animation>
-    </a-box>
+    <a-entity gltf-model="#hbd" rotation="-90 0 0"></a-entity>
   </a-marker>
 
   <!-- ⑥ カメラを追加 -->
