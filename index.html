@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <head>
   <!-- ① A-Frame を読み込む -->
-  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
   <!-- ② AR.js を読み込む -->
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
 
 </head>
 <body style='margin: 0; overflow: hidden;'>
@@ -14,7 +16,7 @@
         <!-- <a-asset-item id="hbd" src="HBD.glb" scale="1 1 1"></a-asset-item> -->
     </a-assets>
   <!-- ④ マーカーを追加 ここから -->
-  <a-marker type="pattern" url="TatsutaYoshihisa.github.io/pattern-marker.patt">
+  <a-marker preset="custom" type="pattern" url="TatsutaYoshihisa.github.io/pattern-marker.patt">
     <!-- ⑤ オブジェクトの追加 -->
     <!-- <a-entity gltf-model="#hbd" rotation="-90 0 0"></a-entity> -->
     <a-box position="0 .5 0" color="#111"></a-box>
